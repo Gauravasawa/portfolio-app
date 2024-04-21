@@ -1,6 +1,5 @@
 // Projects.js
 
-import React from "react";
 import ProjectCard from "../Components/Card/Card";
 
 const Projects = () => {
@@ -46,7 +45,6 @@ const Projects = () => {
       githubUrl: "https://github.com/example/project2",
       liveUrl: "https://example.com/project2",
     },
-    // Add more project data as needed
   ];
 
   return (

@@ -1,7 +1,5 @@
 // ProjectCard.js
 
-import React from "react";
-
 const ProjectCard = ({ title, description, imageUrl, githubUrl, liveUrl }) => {
   return (
     <div className="max-w-xs rounded overflow-hidden shadow-lg">

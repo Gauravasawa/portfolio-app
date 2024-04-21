@@ -7,7 +7,7 @@ import Contact from "./Pages/Contact";
 import Project from "./Pages/Project";
 
 import Footer from "./Components/Footer";
-import Layout from "./utils/Layout/Layout";
+import Layout from "./utils/Layout/layout";
 
 function App() {
   return (

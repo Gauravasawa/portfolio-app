@@ -38,7 +38,6 @@ const Home = () => {
             githubUrl="https://github.com/example/project2"
             liveUrl="https://example.com/project2"
           />
-          {/* Add more ProjectCard components for additional projects */}
         </div>
       </div>
     </div>

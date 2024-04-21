@@ -1,107 +1,5 @@
-// // Navbar.js
-
-// import React from "react";
-// import { Link, NavLink } from "react-router-dom"; // If you're using React Router
-
-// const Navbar = () => {
-//   return (
-//     <nav className="bg-gray-800">
-//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-//         <div className="flex items-center justify-between h-16">
-//           <div className="flex items-center">
-//             <div className="flex-shrink-0 flex items-center">
-//               <img
-//                 className="h-8 w-auto"
-//                 src="https://via.placeholder.com/50"
-//                 alt="Logo"
-//               />
-//               <NavLink
-//                 exact
-//                 to="/"
-//                 className="ml-2 text-white font-bold"
-//                 activeClassName="text-yellow-500"
-//               >
-//                 Your Logo
-//               </NavLink>
-//             </div>
-//           </div>
-//           <div className="hidden md:block">
-//             <div className="ml-4 flex items-center md:ml-6">
-//               {/* Add your navigation links here */}
-//               <NavLink
-//                 to="/"
-//                 className="text-white px-3 py-2 rounded-md text-sm font-medium"
-//                 activeClassName="text-yellow-500"
-//               >
-//                 Home
-//               </NavLink>
-//               <NavLink
-//                 to="/about"
-//                 className="text-white px-3 py-2 rounded-md text-sm font-medium"
-//                 activeClassName="text-yellow-500"
-//               >
-//                 About
-//               </NavLink>
-//               <NavLink
-//                 to="/projects"
-//                 className="text-white px-3 py-2 rounded-md text-sm font-medium"
-//                 activeClassName="text-yellow-500"
-//               >
-//                 Project
-//               </NavLink>
-//               <NavLink
-//                 to="/contact"
-//                 className="text-white px-3 py-2 rounded-md text-sm font-medium"
-//                 activeClassName="text-yellow-500"
-//               >
-//                 Contact
-//               </NavLink>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-
-//       {/* Mobile bottom navigation */}
-//       <div className="md:hidden fixed bottom-0 left-0 w-full bg-gray-800">
-//         <div className="flex justify-around py-2">
-//           {/* Add your navigation links here */}
-//           <NavLink
-//             exact
-//             to="/"
-//             className="text-white px-3 py-2 rounded-md text-sm font-medium"
-//           >
-//             Home
-//           </NavLink>
-//           <NavLink
-//             to="/about"
-//             className="text-white px-3 py-2 rounded-md text-sm font-medium"
-//           >
-//             About
-//           </NavLink>
-//           <NavLink
-//             to="/projects"
-//             className="text-white px-3 py-2 rounded-md text-sm font-medium"
-//           >
-//             Project
-//           </NavLink>
-//           <NavLink
-//             to="/contact"
-//             className="text-white px-3 py-2 rounded-md text-sm font-medium"
-//           >
-//             Contact
-//           </NavLink>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-// Navbar.js
 // Navbar.js
 
-import React from "react";
 import { NavLink, useLocation } from "react-router-dom"; // Using NavLink for active links and useLocation to get the current route
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
@@ -129,7 +27,6 @@ const Navbar = () => {
           </div>
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
-              {/* Add your navigation links here */}
               <NavLink
                 exact
                 to="/"
@@ -186,7 +83,6 @@ const Navbar = () => {
       {/* Mobile bottom navigation */}
       <div className="md:hidden fixed ml-auto mr-auto bottom-0 left-0 w-full bg-gray-800">
         <div className="flex justify-around py-2">
-          {/* Add your navigation links here */}
           <NavLink
             exact
             to="/"

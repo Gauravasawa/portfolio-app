@@ -1,5 +1,4 @@
 // Hero.js
-import React from "react";
 import TypeWritter from "./TypeWritter";
 import HeroImage from "../../assets/hero-image.svg";
 
@@ -28,7 +27,6 @@ const Hero = () => {
 
           {/* Right Column - Image/Video */}
           <div>
-            {/* Replace the image URL with your own */}
             <img src={HeroImage} alt="Hero" className="rounded-lg shadow-md" />
           </div>
         </div>

@@ -1,6 +1,4 @@
 // Layout.js
-
-import React from "react";
 import ScrollToTopButton from "../../Components/floatingButton/FloatingButton";
 import Header from "../../Components/Header/Header";
 

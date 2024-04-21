@@ -1,6 +1,4 @@
 // AboutMe.js
-
-import React from "react";
 import { FaReact, FaNodeJs, FaHtml5, FaCss3 } from "react-icons/fa";
 
 const AboutMe = () => {
@@ -35,7 +33,6 @@ const AboutMe = () => {
             <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-10 h-10 transition duration-300">
               <FaCss3 size={20} />
             </div>
-            {/* Add more languages */}
           </div>
         </div>
         {/* Experience */}
@@ -74,7 +71,6 @@ const AboutMe = () => {
                 </p>
               </div>
             </div>
-            {/* Add more experiences */}
           </div>
         </div>
       </div>
