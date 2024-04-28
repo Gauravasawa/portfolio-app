@@ -1,42 +1,108 @@
 // AboutMe.js
-import { FaReact, FaNodeJs, FaHtml5, FaCss3 } from "react-icons/fa";
+import {
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3,
+  FaNode,
+  FaBootstrap,
+} from "react-icons/fa";
+import { SiNextdotjs, SiTypescript } from "react-icons/si";
+import { TbBrandRedux } from "react-icons/tb";
+import Experience from "../Components/Experience/Experience";
+import Marquee from "react-fast-marquee";
+import { RiSvelteFill } from "react-icons/ri";
 
 const AboutMe = () => {
+  const resumeExperience = [
+    {
+      title: "Frontend Developer",
+      company: "ABC Company",
+      years: "June 2020 - Present",
+      mainTech: ["React"],
+      technologies: ["HTML", "CSS", "JavaScript"],
+    },
+    {
+      title: "Full Stack Developer",
+      company: "XYZ Inc.",
+      years: "January 2018 - May 2020",
+      mainTech: ["Svelte", "Node.js"],
+      technologies: ["HTML", "CSS", "JavaScript", "Express", "MongoDB"],
+    },
+    // Add more experiences as needed
+  ];
+
+  const resumeBasicInfo = {
+    section_name: {
+      experience: "Experience",
+    },
+  };
+
   return (
-    <section className="bg-gray-100 py-20">
+    <section className="bg-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-extrabold text-purple-600 mb-4">
             About Me
           </h2>
-          <p className="text-lg text-gray-800">
+          <p className="text-lg text-gray-100">
             I'm a passionate software developer with experience in building web
             applications. I love learning new technologies and solving complex
             problems.
           </p>
         </div>
         {/* Languages */}
-        <div className="bg-white shadow-md rounded-md p-6 mb-8">
-          <h3 className="text-xl font-semibold text-purple-600 mb-4">
+        <div className="bg-gray-800 shadow-md rounded-md p-6 mb-8">
+          <h3 className="text-xl font-semibold text-white mb-4">
             Languages I Know
           </h3>
-          <div className="flex flex-wrap gap-4">
-            <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-10 h-10 transition duration-300">
-              <FaReact size={20} />
+
+          <Marquee
+            pauseOnHover={true}
+            speed={30}
+            gradient={true}
+            gradientColor="#c770f0"
+            gradientWidth={15}
+          >
+            <div className="flex flex-wrap gap-4">
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <FaReact size={50} />
+              </div>
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <FaNode size={50} />
+              </div>
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <RiSvelteFill size={50} />
+              </div>
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <SiNextdotjs size={50} />
+              </div>
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <SiTypescript size={50} />
+              </div>
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <TbBrandRedux size={50} />
+              </div>
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <FaNodeJs size={50} />
+              </div>
+
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <FaBootstrap size={50} />
+              </div>
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300">
+                <FaHtml5 size={50} />
+              </div>
+              <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-24 h-24 transition duration-300 ">
+                <FaCss3 size={50} />
+              </div>
+
+              {/* Add more languages */}
             </div>
-            <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-10 h-10 transition duration-300">
-              <FaNodeJs size={20} />
-            </div>
-            <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-10 h-10 transition duration-300">
-              <FaHtml5 size={20} />
-            </div>
-            <div className="bg-purple-600 hover:bg-purple-700 text-white rounded-full flex items-center justify-center w-10 h-10 transition duration-300">
-              <FaCss3 size={20} />
-            </div>
-          </div>
+          </Marquee>
         </div>
         {/* Experience */}
-        <div className="bg-white shadow-md rounded-md p-6">
+        {/* <div className="bg-gray-800  shadow-md rounded-md p-6">
           <h3 className="text-xl font-semibold text-purple-600 mb-4">
             Experience
           </h3>
@@ -71,7 +137,14 @@ const AboutMe = () => {
                 </p>
               </div>
             </div>
-          </div>
+            {/* Add more experiences */}
+        {/* </div>
+        </div>  */}
+        <div>
+          <Experience
+            resumeExperience={resumeExperience}
+            resumeBasicInfo={resumeBasicInfo}
+          />
         </div>
       </div>
     </section>
