@@ -15,3 +15,67 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.vertical-timeline-element-content {
+  position: relative;
+  margin-left: 60px;
+  background: black;
+  border-radius: .25em;
+  padding: 1em;
+  -webkit-box-shadow: 0 3px 0 #ddd;
+  box-shadow: 0 3px 0 #C070f0;
+}
+
+.vertical-timeline-element-content .vertical-timeline-element-date{
+  opacity: unset;
+}
+
+.vertical-timeline::before {
+
+  background-color: #C070f0;
+}
+
+/* Chrome, Safari */
+/* ::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 10px;
+} */
+
+/* ::-webkit-scrollbar-track-piece {
+  background-color: white;
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  height: 30px;
+  background-color: #C070f0;
+  border-radius: 10px;
+}
+ */
+
+ /* !important is needed sometimes */
+ ::-webkit-scrollbar {
+   width: 5px !important;
+ }
+
+ /* Track */
+ ::-webkit-scrollbar-track {
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+   -webkit-border-radius: 10px !important;
+   border-radius: 10px !important;
+ }
+
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   -webkit-border-radius: 10px !important;
+   border-radius: 10px !important;
+   background: #C070f0 !important;
+   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important;
+   cursor: pointer;
+
+ }
+
+ ::-webkit-scrollbar-thumb:window-inactive {
+   background: #C070f0 !important;
+ }
+ 
