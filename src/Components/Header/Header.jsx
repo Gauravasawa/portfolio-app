@@ -3,6 +3,12 @@
 import { NavLink, useLocation } from "react-router-dom"; // Using NavLink for active links and useLocation to get the current route
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
+import {
+  AiOutlineHome,
+  AiOutlineFundProjectionScreen,
+  AiOutlineUser,
+} from "react-icons/ai";
+import { ImBlog } from "react-icons/im";
 import Logo from "../../assets/Logo.png";
 
 const Navbar = () => {
@@ -19,7 +25,7 @@ const Navbar = () => {
                 exact
                 to="/"
                 className="ml-2 text-white font-bold"
-                activeClassName="text-yellow-500"
+                activeClassName="text-purple-500"
               >
                 GA
               </NavLink>
@@ -30,39 +36,51 @@ const Navbar = () => {
               <NavLink
                 exact
                 to="/"
-                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/" ? "text-yellow-500" : ""
+                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/" ? "text-purple-500" : ""
                 }`}
               >
-                Home
+                <span className="flex flex-row flex-wrap items-center">
+                  <AiOutlineHome style={{ marginRight: 3 }} size={15} /> Home
+                </span>
               </NavLink>
               <NavLink
                 to="/about"
-                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/about" ? "text-yellow-500" : ""
+                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/about" ? "text-purple-500" : ""
                 }`}
               >
-                About
+                <span className="flex flex-row flex-wrap items-center">
+                  <AiOutlineUser style={{ marginRight: 3 }} size={15} /> About
+                </span>
               </NavLink>
               <NavLink
                 to="/projects"
-                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/projects" ? "text-yellow-500" : ""
+                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/projects" ? "text-purple-500" : ""
                 }`}
               >
-                Projects
+                <span className="flex flex-row flex-wrap items-center">
+                  <AiOutlineFundProjectionScreen
+                    style={{ marginRight: 3 }}
+                    size={15}
+                  />{" "}
+                  Projects
+                </span>
               </NavLink>
               <NavLink
                 to="/contact"
-                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/contact" ? "text-yellow-500" : ""
+                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/contact" ? "text-purple-500" : ""
                 }`}
               >
-                Contact
+                <span className="flex flex-row flex-wrap items-center">
+                  <ImBlog style={{ marginRight: 3 }} size={15} /> Blog
+                </span>
               </NavLink>
 
-              <button className="p-5 content-center border-white border-2 drop-shadow-lg shadow-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                <h3 className="text-center font-bold text-white ">
+              <button className="p-5 content-center border-white border-2 drop-shadow-lg shadow-white  hover:border-purple-500 hover:shadow-purple-600 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                <h3 className="text-center font-bold text-white">
                   <FontAwesomeIcon icon={faDownload} /> Resume
                 </h3>
               </button>
@@ -70,7 +88,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center ">
-              <button className="md:hidden p-5 content-center border-white border-2 drop-shadow-lg shadow-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+              <button className="md:hidden p-5 content-center border-white border-2 drop-shadow-lg hover:border-purple-500 hover:shadow-purple-600 shadow-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
                 <h3 className="text-center font-bold text-white ">
                   <FontAwesomeIcon icon={faDownload} /> Resume
                 </h3>
@@ -81,41 +99,57 @@ const Navbar = () => {
       </div>
 
       {/* Mobile bottom navigation */}
-      <div className="md:hidden fixed ml-auto mr-auto bottom-0 left-0 w-full bg-gray-800">
+      <div className="md:hidden fixed ml-auto mr-auto bottom-0 left-0 w-full bg-gray-800 z-10">
         <div className="flex justify-around py-2">
           <NavLink
             exact
             to="/"
-            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center ${
-              location.pathname === "/" ? "text-yellow-500" : ""
+            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
+              location.pathname === "/" ? "text-purple-500" : ""
             }`}
           >
-            <span className="mr-2">Home</span>
+            <span className=" flex flex-row flex-wrap items-center mr-2 justify-center ">
+              <AiOutlineHome style={{ marginRight: 3 }} size={15} /> Home
+            </span>
           </NavLink>
 
           <NavLink
             to="/about"
-            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center ${
-              location.pathname === "/about" ? "text-yellow-500" : ""
+            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
+              location.pathname === "/about" ? "text-purple-500" : ""
             }`}
           >
-            <span className="mr-2">About</span>
+            <span className="flex flex-row flex-wrap items-center mr-2 justify-center ">
+              <AiOutlineUser style={{ marginRight: 3 }} size={15} /> About
+            </span>
           </NavLink>
           <NavLink
             to="/projects"
-            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center ${
-              location.pathname === "/projects" ? "text-yellow-500" : ""
+            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
+              location.pathname === "/projects" ? "text-purple-500" : ""
             }`}
           >
-            <span className="mr-2">Projects</span>
+            <span className="flex flex-row flex-wrap items-center mr-2 justify-center">
+              <AiOutlineFundProjectionScreen
+                style={{ marginRight: 3 }}
+                size={15}
+              />{" "}
+              Projects
+            </span>
           </NavLink>
           <NavLink
             to="/contact"
-            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center ${
-              location.pathname === "/contact" ? "text-yellow-500" : ""
+            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
+              location.pathname === "/contact" ? "text-purple-500" : ""
             }`}
           >
-            <span className="mr-2">Contact</span>
+            <span
+              className="flex flex-row flex-wrap items-center mr-2 justify-center
+            
+            "
+            >
+              <ImBlog style={{ marginRight: 3 }} size={15} /> Blog
+            </span>
           </NavLink>
         </div>
       </div>
