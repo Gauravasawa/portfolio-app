@@ -2,16 +2,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ProjectCard from "../Components/Card/Card";
 import Hero from "../Components/Hero/Hero";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import BlogSection from "../Components/blogs/Blogs";
 
 const Home = () => {
   return (
     <div>
       <Hero />
 
+      {/* Projects section */}
       <div>
         {/* Heading "Projects" with See More link */}
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-3xl font-semibold text-purple-600 ml-6">
+        <div className="flex justify-between items-center mb-4 mt-2">
+          <h2 className="text-3xl md:text-2xl font-semibold text-purple-600 ml-6">
             Projects
           </h2>
           <a
@@ -38,7 +40,19 @@ const Home = () => {
             githubUrl="https://github.com/example/project2"
             liveUrl="https://example.com/project2"
           />
+          <ProjectCard
+            title="Project 3"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            imageUrl="https://image.tmdb.org/t/p/original/nTPFkLUARmo1bYHfkfdNpRKgEOs.jpg"
+            githubUrl="https://github.com/example/project2"
+            liveUrl="https://example.com/project2"
+          />
         </div>
+        {/* <Education />
+        <ContactSection /> */}
+
+        {/* Blog Section */}
+        <BlogSection />
       </div>
     </div>
   );
