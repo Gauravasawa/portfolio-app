@@ -1,26 +1,28 @@
+import React, { Suspense } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import BlogSection from "./Components/blogs/Blogs";
 
-import Home from "./Pages/Home";
-import AboutUs from "./Pages/AboutUs";
-import Contact from "./Pages/Contact";
-import Project from "./Pages/Project";
-
-import Footer from "./Components/Footer";
-import Layout from "./utils/Layout/Layout";
+const Home = React.lazy(() => import("./Pages/Home"));
+const AboutUs = React.lazy(() => import("./Pages/AboutUs"));
+const Project = React.lazy(() => import("./Pages/Project"));
+const Footer = React.lazy(() => import("./Components/Footer"));
+const Layout = React.lazy(() => import("./utils/Layout/Layout"));
 
 function App() {
   return (
     <BrowserRouter>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutUs />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Layout>
-      <Footer />
+      <Suspense fallback={<div>Loafing...</div>}>
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/projects" element={<Project />} />
+            <Route path="/blog" element={<BlogSection />} />
+          </Routes>
+        </Layout>
+        <Footer />
+      </Suspense>
     </BrowserRouter>
   );
 }
