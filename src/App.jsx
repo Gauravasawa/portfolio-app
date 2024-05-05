@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import BlogSection from "./Components/blogs/Blogs";
+import Loading from "./Components/Loading/Loading";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 const AboutUs = React.lazy(() => import("./Pages/AboutUs"));
@@ -12,7 +13,7 @@ const Layout = React.lazy(() => import("./utils/Layout/Layout"));
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<div>Loafing...</div>}>
+      <Suspense fallback={<Loading />}>
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
