@@ -51,41 +51,43 @@ const Experience = ({ resumeExperience, resumeBasicInfo }) => {
         );
       });
       return (
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work text-white"
-          date={work.years}
-          iconStyle={{
-            background: "#c770f0", // Matching with the AboutMe component's color scheme
-            color: "#fff",
-            textAlign: "center",
-          }}
-          icon={
-            mainTechnologies.includes("React") ? (
-              <FaReact className="experience-icon" />
-            ) : (
-              <RiSvelteFill className="experience-icon" />
-            )
-          }
-          key={i}
-        >
-          <div style={{ textAlign: "left", marginBottom: "4px" }}>
-            {mainTech}
-          </div>
+        resumeExperience && (
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work text-white"
+            date={work.years}
+            iconStyle={{
+              background: "#c770f0", // Matching with the AboutMe component's color scheme
+              color: "#fff",
+              textAlign: "center",
+            }}
+            icon={
+              mainTechnologies.includes("React") ? (
+                <FaReact className="experience-icon" />
+              ) : (
+                <RiSvelteFill className="experience-icon" />
+              )
+            }
+            key={i}
+          >
+            <div style={{ textAlign: "left", marginBottom: "4px" }}>
+              {mainTech}
+            </div>
 
-          <h3
-            className="vertical-timeline-element-title font-semibold text-white"
-            style={{ textAlign: "left" }} // Matching with the AboutMe component's color scheme
-          >
-            {work.title}
-          </h3>
-          <h4
-            className="vertical-timeline-element-subtitle font-semibold text-white"
-            style={{ textAlign: "left" }} // Matching with the AboutMe component's color scheme
-          >
-            {work.company}
-          </h4>
-          <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
-        </VerticalTimelineElement>
+            <h3
+              className="vertical-timeline-element-title font-semibold text-white"
+              style={{ textAlign: "left" }} // Matching with the AboutMe component's color scheme
+            >
+              {work.title}
+            </h3>
+            <h4
+              className="vertical-timeline-element-subtitle font-semibold text-white"
+              style={{ textAlign: "left" }} // Matching with the AboutMe component's color scheme
+            >
+              {work.company}
+            </h4>
+            <div style={{ textAlign: "left", marginTop: "15px" }}>{tech}</div>
+          </VerticalTimelineElement>
+        )
       );
     });
   }
