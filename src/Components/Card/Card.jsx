@@ -2,7 +2,7 @@
 
 const ProjectCard = ({ title, description, imageUrl, githubUrl, liveUrl }) => {
   return (
-    <div className="max-w-xs rounded overflow-hidden shadow-lg">
+    <div className=" bg-gray-900 max-w-xs rounded overflow-hidden shadow-lg mt-3">
       <div className="relative">
         <img className="w-full" src={imageUrl} alt={title} />
         <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-purple-700 to-transparent opacity-70"></div>

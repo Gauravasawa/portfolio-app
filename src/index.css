@@ -19,20 +19,20 @@ code {
 .vertical-timeline-element-content {
   position: relative;
   margin-left: 60px;
-  background: black;
+  background: black !important;
   border-radius: .25em;
   padding: 1em;
   -webkit-box-shadow: 0 3px 0 #ddd;
-  box-shadow: 0 3px 0 #C070f0;
+  box-shadow: 0 3px 0 #C070f0 !important;
 }
 
 .vertical-timeline-element-content .vertical-timeline-element-date{
-  opacity: unset;
+  opacity: unset !important;
 }
 
 .vertical-timeline::before {
 
-  background-color: #C070f0;
+  background-color: #C070f0 !important;
 }
 
 /* Chrome, Safari */
