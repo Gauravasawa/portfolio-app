@@ -69,9 +69,9 @@ const Navbar = () => {
                 </span>
               </NavLink>
               <NavLink
-                to="/contact"
+                to="/blog"
                 className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/contact" ? "text-purple-500" : ""
+                  location.pathname === "/blog" ? "text-purple-500" : ""
                 }`}
               >
                 <span className="flex flex-row flex-wrap items-center">
@@ -138,9 +138,9 @@ const Navbar = () => {
             </span>
           </NavLink>
           <NavLink
-            to="/contact"
+            to="/blog"
             className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
-              location.pathname === "/contact" ? "text-purple-500" : ""
+              location.pathname === "/blog" ? "text-purple-500" : ""
             }`}
           >
             <span
