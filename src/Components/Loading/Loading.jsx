@@ -16,21 +16,3 @@ const Loading = () => {
 };
 
 export default Loading;
-
-// import React from "react";
-
-// const Loading = () => {
-//   return (
-//     <div className="flex justify-center items-center h-screen">
-//       <div className="relative text-center">
-//         <div className="animate-spin rounded-full h-32 w-32 border-4 border-purple-600 mb-4"></div>
-//         <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center flex-col">
-//           <span className="text-purple-600 font-bold text-4xl mb-2">GA</span>
-//           <p className="text-purple-600 font-bold text-xl">Gaurav Asawa</p>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Loading;
