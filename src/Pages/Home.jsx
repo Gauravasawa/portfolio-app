@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import ProjectCard from "../Components/Card/Card";
+import ProjectCard from "../Components/ProjectCard/Card";
 import Hero from "../Components/Hero/Hero";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BlogSection from "../Components/blogs/Blogs";
@@ -27,6 +27,7 @@ const Home = () => {
         {/* Project Cards */}
         <div className="flex mt-5 mb-5 justify-around flex-wrap">
           <ProjectCard
+            projectId={1}
             title="Project 1"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             imageUrl="https://image.tmdb.org/t/p/original/nTPFkLUARmo1bYHfkfdNpRKgEOs.jpg"
@@ -34,6 +35,7 @@ const Home = () => {
             liveUrl="https://example.com/project1"
           />
           <ProjectCard
+            projectId={2}
             title="Project 2"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             imageUrl="https://image.tmdb.org/t/p/original/nTPFkLUARmo1bYHfkfdNpRKgEOs.jpg"
@@ -41,6 +43,7 @@ const Home = () => {
             liveUrl="https://example.com/project2"
           />
           <ProjectCard
+            projectId={3}
             title="Project 3"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             imageUrl="https://image.tmdb.org/t/p/original/nTPFkLUARmo1bYHfkfdNpRKgEOs.jpg"
@@ -48,8 +51,6 @@ const Home = () => {
             liveUrl="https://example.com/project2"
           />
         </div>
-        {/* <Education />
-        <ContactSection /> */}
 
         {/* Blog Section */}
         <BlogSection />
