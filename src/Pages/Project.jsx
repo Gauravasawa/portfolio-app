@@ -1,6 +1,6 @@
 // Projects.js
 
-import ProjectCard from "../Components/Card/Card";
+import ProjectCard from "../Components/ProjectCard/Card";
 
 const Projects = () => {
   // Sample project data (replace with your actual project data)
@@ -53,6 +53,7 @@ const Projects = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {projects.map((project) => (
           <ProjectCard
+            projectId={project.id}
             key={project.id}
             title={project.title}
             description={project.description}
