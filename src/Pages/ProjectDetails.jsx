@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import Slider from "react-slick";
 
 const ProjectDetail = () => {
   const { id } = useParams(); // Access the id parameter from the URL
@@ -11,6 +12,14 @@ const ProjectDetail = () => {
     imageUrl: "https://via.placeholder.com/600x400",
     githubUrl: "https://github.com/example/project",
     liveUrl: "https://example.com/project",
+  };
+
+  var settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   return (
@@ -45,11 +54,28 @@ const ProjectDetail = () => {
 
           {/* Right Column - Project Image */}
           <div>
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              className="rounded-lg shadow-md"
-            />
+            <div className="carousel w-full">
+              <div id="slide1" className="carousel-item relative w-full">
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="rounded-lg shadow-md"
+                />
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="rounded-lg shadow-md"
+                />
+                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                  <a href="#slide4" className="btn btn-circle">
+                    ❮
+                  </a>
+                  <a href="#slide2" className="btn btn-circle">
+                    ❯
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

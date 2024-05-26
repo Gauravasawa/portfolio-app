@@ -10,6 +10,7 @@ import {
 } from "react-icons/ai";
 import { ImBlog } from "react-icons/im";
 import Logo from "../../assets/Logo.png";
+import Resume from "../../assets/Gaurav_Asawa_Resume.pdf";
 
 const Navbar = () => {
   const location = useLocation(); // Get the current route
@@ -22,10 +23,10 @@ const Navbar = () => {
             <div className="flex-shrink-0 flex items-center">
               <img className="h-8 w-auto" src={Logo} alt="Logo" />
               <NavLink
-                exact
                 to="/"
-                className="ml-2 text-white font-bold"
-                activeClassName="text-purple-500"
+                className={`text-white px-3 py-2 rounded-md text-xl  font-bold hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/" ? "!text-purple-500" : ""
+                }`}
               >
                 GA
               </NavLink>
@@ -34,10 +35,9 @@ const Navbar = () => {
           <div className="hidden md:block">
             <div className="ml-4 flex items-center md:ml-6">
               <NavLink
-                exact
                 to="/"
-                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/" ? "text-purple-500" : ""
+                className={`text-white px-3 py-2 rounded-md text-sm font-semibold hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/" ? "!text-purple-500" : ""
                 }`}
               >
                 <span className="flex flex-row flex-wrap items-center">
@@ -46,8 +46,8 @@ const Navbar = () => {
               </NavLink>
               <NavLink
                 to="/about"
-                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/about" ? "text-purple-500" : ""
+                className={`text-white px-3 py-2 rounded-md text-sm font-semibold hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/about" ? "!text-purple-500" : ""
                 }`}
               >
                 <span className="flex flex-row flex-wrap items-center">
@@ -56,8 +56,8 @@ const Navbar = () => {
               </NavLink>
               <NavLink
                 to="/projects"
-                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/projects" ? "text-purple-500" : ""
+                className={`text-white px-3 py-2 rounded-md text-sm font-semibold hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/projects" ? "!text-purple-500" : ""
                 }`}
               >
                 <span className="flex flex-row flex-wrap items-center">
@@ -70,8 +70,8 @@ const Navbar = () => {
               </NavLink>
               <NavLink
                 to="/blog"
-                className={`text-white px-3 py-2 rounded-md text-sm font-medium hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
-                  location.pathname === "/blog" ? "text-purple-500" : ""
+                className={`text-white px-3 py-2 rounded-md text-sm font-semibold hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${
+                  location.pathname === "/blog" ? "!text-purple-500" : ""
                 }`}
               >
                 <span className="flex flex-row flex-wrap items-center">
@@ -79,20 +79,32 @@ const Navbar = () => {
                 </span>
               </NavLink>
 
-              <button className="p-5 content-center border-white border-2 drop-shadow-lg shadow-white  hover:border-purple-500 hover:shadow-purple-600 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                <h3 className="text-center font-bold text-white">
-                  <FontAwesomeIcon icon={faDownload} /> Resume
-                </h3>
-              </button>
+              <a
+                href={Resume}
+                download="Gaurav_Asawa_Resume.pdf"
+                target="_blank"
+              >
+                <button className="p-5 content-center border-white border-2 drop-shadow-lg shadow-white  hover:border-purple-500 hover:shadow-purple-600 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  <h3 className="text-center font-bold text-white">
+                    <FontAwesomeIcon icon={faDownload} /> Resume
+                  </h3>
+                </button>
+              </a>
             </div>
           </div>
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center ">
-              <button className="md:hidden p-5 content-center border-white border-2 drop-shadow-lg hover:border-purple-500 hover:shadow-purple-600 shadow-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
-                <h3 className="text-center font-bold text-white ">
-                  <FontAwesomeIcon icon={faDownload} /> Resume
-                </h3>
-              </button>
+              <a
+                href={Resume}
+                download="Gaurav_Asawa_Resume.pdf"
+                target="_blank"
+              >
+                <button className="md:hidden p-5 content-center border-white border-2 drop-shadow-lg hover:border-purple-500 hover:shadow-purple-600 shadow-white btn btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                  <h3 className="text-center font-bold text-white ">
+                    <FontAwesomeIcon icon={faDownload} /> Resume
+                  </h3>
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -102,10 +114,9 @@ const Navbar = () => {
       <div className="md:hidden fixed ml-auto mr-auto bottom-0 left-0 w-full bg-gray-800 z-10">
         <div className="flex justify-around py-2">
           <NavLink
-            exact
             to="/"
-            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
-              location.pathname === "/" ? "text-purple-500" : ""
+            className={`text-white px-3 py-2 rounded-md text-sm font-semibold flex items-center hover:text-purple-700 hover:border-purple-600 ${
+              location.pathname === "/" ? "!text-purple-500" : ""
             }`}
           >
             <span className=" flex flex-row flex-wrap items-center mr-2 justify-center ">
@@ -115,8 +126,8 @@ const Navbar = () => {
 
           <NavLink
             to="/about"
-            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
-              location.pathname === "/about" ? "text-purple-500" : ""
+            className={`text-white px-3 py-2 rounded-md text-sm font-semibold flex items-center hover:text-purple-700 hover:border-purple-600 ${
+              location.pathname === "/about" ? "!text-purple-500" : ""
             }`}
           >
             <span className="flex flex-row flex-wrap items-center mr-2 justify-center ">
@@ -125,8 +136,8 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/projects"
-            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
-              location.pathname === "/projects" ? "text-purple-500" : ""
+            className={`text-white px-3 py-2 rounded-md text-sm font-semibold flex items-center hover:text-purple-700 hover:border-purple-600 ${
+              location.pathname === "/projects" ? "!text-purple-500" : ""
             }`}
           >
             <span className="flex flex-row flex-wrap items-center mr-2 justify-center">
@@ -139,8 +150,8 @@ const Navbar = () => {
           </NavLink>
           <NavLink
             to="/blog"
-            className={`text-white px-3 py-2 rounded-md text-sm font-medium flex items-center hover:text-purple-700 hover:border-purple-600 ${
-              location.pathname === "/blog" ? "text-purple-500" : ""
+            className={`text-white px-3 py-2 rounded-md text-sm font-semibold flex items-center hover:text-purple-700 hover:border-purple-600 ${
+              location.pathname === "/blog" ? "!text-purple-500" : ""
             }`}
           >
             <span

@@ -1,50 +1,52 @@
 // Projects.js
 
 import ProjectCard from "../Components/ProjectCard/Card";
+import moviesHomePageImg from "../assets/movies/Screenshot (1).png";
+import laundryHomePage from "../assets/laundry/laundry-homepage.jpg";
 
 const Projects = () => {
   // Sample project data (replace with your actual project data)
   const projects = [
     {
       id: 1,
-      title: "Project 1",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      imageUrl: "https://via.placeholder.com/300",
-      githubUrl: "https://github.com/example/project1",
-      liveUrl: "https://example.com/project1",
+      title: "Movies App",
+      description: "Movies App Project",
+      imageUrl: `${moviesHomePageImg}`,
+      githubUrl: "https://github.com/Gauravasawa/movies_app_redux",
+      liveUrl: "https://movies-app-redux-tau.vercel.app/",
     },
     {
       id: 2,
-      title: "Project 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      imageUrl: "https://via.placeholder.com/300",
-      githubUrl: "https://github.com/example/project2",
-      liveUrl: "https://example.com/project2",
+      title: "Laundry App",
+      description: "Laundry App",
+      imageUrl: `${laundryHomePage}`,
+      githubUrl: "https://github.com/Gauravasawa/laundry",
+      liveUrl: "",
     },
-    {
-      id: 3,
-      title: "Project 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      imageUrl: "https://via.placeholder.com/300",
-      githubUrl: "https://github.com/example/project2",
-      liveUrl: "https://example.com/project2",
-    },
-    {
-      id: 4,
-      title: "Project 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      imageUrl: "https://via.placeholder.com/300",
-      githubUrl: "https://github.com/example/project2",
-      liveUrl: "https://example.com/project2",
-    },
-    {
-      id: 5,
-      title: "Project 2",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      imageUrl: "https://via.placeholder.com/300",
-      githubUrl: "https://github.com/example/project2",
-      liveUrl: "https://example.com/project2",
-    },
+    // {
+    //   id: 3,
+    //   title: "Project 2",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    //   imageUrl: "https://via.placeholder.com/300",
+    //   githubUrl: "https://github.com/example/project2",
+    //   liveUrl: "https://example.com/project2",
+    // },
+    // {
+    //   id: 4,
+    //   title: "Project 2",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    //   imageUrl: "https://via.placeholder.com/300",
+    //   githubUrl: "https://github.com/example/project2",
+    //   liveUrl: "https://example.com/project2",
+    // },
+    // {
+    //   id: 5,
+    //   title: "Project 2",
+    //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    //   imageUrl: "https://via.placeholder.com/300",
+    //   githubUrl: "https://github.com/example/project2",
+    //   liveUrl: "https://example.com/project2",
+    // },
   ];
 
   return (

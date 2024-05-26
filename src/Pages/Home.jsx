@@ -3,6 +3,9 @@ import ProjectCard from "../Components/ProjectCard/Card";
 import Hero from "../Components/Hero/Hero";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import BlogSection from "../Components/blogs/Blogs";
+import Introduction from "../Components/Introduction/Introduction";
+import moviesHomePageImg from "../assets/movies/Screenshot (1).png";
+import laundryHomePage from "../assets/laundry/laundry-homepage.jpg";
 
 const Home = () => {
   return (
@@ -28,32 +31,35 @@ const Home = () => {
         <div className="flex mt-5 mb-5 justify-around flex-wrap">
           <ProjectCard
             projectId={1}
-            title="Project 1"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            imageUrl="https://image.tmdb.org/t/p/original/nTPFkLUARmo1bYHfkfdNpRKgEOs.jpg"
-            githubUrl="https://github.com/example/project1"
-            liveUrl="https://example.com/project1"
+            title="Movies App"
+            description="Movies App Project"
+            imageUrl={moviesHomePageImg}
+            githubUrl="https://github.com/Gauravasawa/movies_app_redux"
+            liveUrl="https://movies-app-redux-tau.vercel.app/"
           />
           <ProjectCard
             projectId={2}
-            title="Project 2"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            imageUrl="https://image.tmdb.org/t/p/original/nTPFkLUARmo1bYHfkfdNpRKgEOs.jpg"
-            githubUrl="https://github.com/example/project2"
-            liveUrl="https://example.com/project2"
+            title="Laundry App"
+            description="App to place your Laundry"
+            imageUrl={laundryHomePage}
+            githubUrl="https://github.com/Gauravasawa/laundry"
+            liveUrl=""
           />
-          <ProjectCard
+          {/* <ProjectCard
             projectId={3}
             title="Project 3"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            imageUrl="https://image.tmdb.org/t/p/original/nTPFkLUARmo1bYHfkfdNpRKgEOs.jpg"
+            imageUrl="https://miro.medium.com/v2/resize:fit:873/1*hPjPhc2gYkTplzF_DH-g5Q.png"
             githubUrl="https://github.com/example/project2"
             liveUrl="https://example.com/project2"
-          />
+          /> */}
         </div>
 
         {/* Blog Section */}
         <BlogSection />
+
+        {/* <Introduction /> */}
+        <Introduction />
       </div>
     </div>
   );

@@ -1,8 +1,15 @@
 // Hero.js
+import { useNavigate } from "react-router-dom"; // Using NavLink for active links and useLocation to get the current route
 import TypeWritter from "./TypeWritter";
 import HeroImage from "../../assets/hero-image.svg";
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const navigatePortfolio = () => {
+    // Navigate to /projects
+    navigate("/projects");
+  };
+
   return (
     <section className="bg-gray-900 text-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,7 +27,10 @@ const Hero = () => {
               I design and build beautiful websites to help businesses grow
               online.
             </p>
-            <button className="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-3 mt-6 rounded-lg">
+            <button
+              onClick={navigatePortfolio}
+              className="bg-purple-500 hover:bg-purple-600 drop-shadow-2xl shadow-white text-white font-semibold px-6 py-3 mt-6 rounded-lg btn "
+            >
               View Portfolio
             </button>
           </div>

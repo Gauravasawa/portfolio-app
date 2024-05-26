@@ -27,8 +27,9 @@ function App() {
             <Route path="/about" element={<AboutUs />} />
 
             <Route path="/projects" element={<Project />} />
-            {/* Dynamic route for specific blog post */}
-            <Route path="/projects/:id" element={<ProjectDetail />} />
+
+            {/* Dynamic route for specific Project Details */}
+            {/* <Route path="/projects/:id" element={<ProjectDetail />} /> */}
 
             <Route path="/blog" element={<BlogSection />} />
             {/* Dynamic route for specific blog post */}

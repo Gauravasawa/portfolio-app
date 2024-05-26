@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import ComingSoon from "../ComingSoon/ComingSoon";
 
 const BlogSection = () => {
   // Dummy blog data
@@ -42,21 +43,27 @@ const BlogSection = () => {
               Explore my latest blog posts for insights, tutorials, and more.
             </p>
           </div>
-          <div className="flex justify-between items-start mb-12 ">
-            <div></div> {/* Empty div to push blogs to the center */}
-            <a
+          {/* <div className="flex justify-between items-start mb-12 "> */}
+          <div></div> {/* Empty div to push blogs to the center */}
+          {/* <a
               href="/blog"
               className="flex items-center text-purple-600 hover:text-purple-800 transition-colors duration-300"
               style={{ marginTop: "-2rem" }} // Adjust the margin-top to move the link up
-            >
-              <span className="mr-1">See More</span>
+            > */}
+          {/* <span className="mr-1">See More</span>
               <FontAwesomeIcon icon={faArrowRight} />
             </a>
-          </div>
+          </div> */}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {/* Render blog post cards */}
-          {blogs.map((blog) => (
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8"> */}
+        {/* <h2 className="text-3xl font-extrabold text-purple-600 mb-4 text-center">
+          Coming Soon
+        </h2> */}
+
+        <ComingSoon />
+
+        {/* Render blog post cards */}
+        {/* {blogs.map((blog) => (
             <div
               key={blog.id}
               className="bg-gray-800 rounded-lg shadow-lg overflow-hidden"
@@ -79,8 +86,8 @@ const BlogSection = () => {
                 </a>
               </div>
             </div>
-          ))}
-        </div>
+          ))} */}
+        {/* </div> */}
       </div>
     </section>
   );
