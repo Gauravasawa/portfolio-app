@@ -34,6 +34,7 @@ const Home = () => {
             title="Movies App"
             description="Movies App Project"
             imageUrl={moviesHomePageImg}
+            alt="Gaurav Asawa - movies app project"
             githubUrl="https://github.com/Gauravasawa/movies_app_redux"
             liveUrl="https://movies-app-redux-tau.vercel.app/"
           />
@@ -42,6 +43,7 @@ const Home = () => {
             title="Laundry App"
             description="App to place your Laundry"
             imageUrl={laundryHomePage}
+            alt="Gaurav Asawa - laundry app project"
             githubUrl="https://github.com/Gauravasawa/laundry"
             liveUrl=""
           />

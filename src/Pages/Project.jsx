@@ -12,14 +12,16 @@ const Projects = () => {
       title: "Movies App",
       description: "Movies App Project",
       imageUrl: `${moviesHomePageImg}`,
+      alt: "Gaurav Asawa - movies app project",
       githubUrl: "https://github.com/Gauravasawa/movies_app_redux",
       liveUrl: "https://movies-app-redux-tau.vercel.app/",
     },
     {
       id: 2,
       title: "Laundry App",
-      description: "Laundry App",
+      description: "App to place your Laundry",
       imageUrl: `${laundryHomePage}`,
+      alt: "Gaurav Asawa - laundry app project",
       githubUrl: "https://github.com/Gauravasawa/laundry",
       liveUrl: "",
     },
@@ -60,6 +62,7 @@ const Projects = () => {
             title={project.title}
             description={project.description}
             imageUrl={project.imageUrl}
+            alt={project.alt}
             githubUrl={project.githubUrl}
             liveUrl={project.liveUrl}
           />

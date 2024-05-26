@@ -8,6 +8,7 @@ const ProjectCard = ({
   githubUrl,
   liveUrl,
   projectId,
+  alt,
 }) => {
   return (
     <div className=" bg-gray-900 max-w-xs rounded overflow-hidden shadow-lg mt-3">
@@ -16,7 +17,7 @@ const ProjectCard = ({
         <img
           className="w-full"
           src={imageUrl}
-          alt={title}
+          alt={alt}
           style={{ height: "320px", width: "320px", objectFit: "cover" }}
         />
         <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-purple-700 to-transparent opacity-70"></div>

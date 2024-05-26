@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
-              <img className="h-8 w-auto" src={Logo} alt="Logo" />
+              <img className="h-8 w-auto" src={Logo} alt="Gaurav Asawa Logo" />
               <NavLink
                 to="/"
                 className={`text-white px-3 py-2 rounded-md text-xl  font-bold hover:text-purple-700 hover:border-purple-600 hover:shadow-md ${

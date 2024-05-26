@@ -53,7 +53,7 @@ const Hero = () => {
             <Tilt options={defaultOptions}>
               <img
                 src={HeroImage}
-                alt="Hero"
+                alt="Gaurav Asawa Hero"
                 className="rounded-lg shadow-md"
               />
             </Tilt>
