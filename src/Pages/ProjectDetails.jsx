@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import Slider from "react-slick";
 
 const ProjectDetail = () => {
   const { id } = useParams(); // Access the id parameter from the URL

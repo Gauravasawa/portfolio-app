@@ -1,4 +1,10 @@
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaGithub,
+  FaInstagram,
+} from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -108,7 +114,7 @@ const Footer = () => {
             <ul className="flex space-x-4">
               <li>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/gaurav.asawa.3"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-600 relative"
@@ -120,7 +126,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://x.com/Gaurav_asawa4"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-600 relative"
@@ -132,7 +138,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://in.linkedin.com/in/gaurav-asawa-84a93314a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-600 relative"
@@ -144,13 +150,25 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://github.com/Gauravasawa"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-purple-600 relative"
                 >
                   <div className="flex items-center justify-center w-12 h-12 rounded-full !border-purple-600 border-2 bg-white shadow-2xl transition duration-300  hover:shadow-[0px_9px_30px_9px_rgba(212,0,255,1)]">
                     <FaGithub className="text-2xl text-purple-600" />
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/gauravasawa/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-purple-600 relative"
+                >
+                  <div className="flex items-center justify-center w-12 h-12 rounded-full !border-purple-600 border-2 bg-white shadow-2xl transition duration-300  hover:shadow-[0px_9px_30px_9px_rgba(212,0,255,1)]">
+                    <FaInstagram className="text-2xl text-purple-600" />
                   </div>
                 </a>
               </li>
