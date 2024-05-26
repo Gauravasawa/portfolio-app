@@ -6,6 +6,7 @@ import BlogSection from "../Components/blogs/Blogs";
 import Introduction from "../Components/Introduction/Introduction";
 import moviesHomePageImg from "../assets/movies/Screenshot (1).png";
 import laundryHomePage from "../assets/laundry/laundry-homepage.jpg";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -19,13 +20,13 @@ const Home = () => {
           <h2 className="text-3xl md:text-2xl font-semibold text-purple-600 ml-6">
             Projects
           </h2>
-          <a
-            href="/projects"
+          <Link
+            to="/projects"
             className="flex items-center text-purple-600 hover:text-purple-800 transition-colors duration-300 ml-6 mr-5"
           >
             <span className="mr-1">See More </span>{" "}
             <FontAwesomeIcon icon={faArrowRight} />
-          </a>
+          </Link>
         </div>
         {/* Project Cards */}
         <div className="flex mt-5 mb-5 justify-around flex-wrap">
