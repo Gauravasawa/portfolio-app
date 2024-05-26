@@ -16,20 +16,36 @@ import { RiSvelteFill } from "react-icons/ri";
 const AboutMe = () => {
   const resumeExperience = [
     {
-      title: "Frontend Developer",
-      company: "ABC Company",
-      years: "June 2020 - Present",
-      mainTech: ["React"],
-      technologies: ["HTML", "CSS", "JavaScript"],
+      title: "Associate Business Analyst | UI Developer (Client Project)",
+      company: "Infosys Ltd",
+      years: "Oct 2022 - Present",
+      mainTech: ["Svelte"],
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Svelte",
+        "Svelte Kit",
+        "TypeScript",
+      ],
     },
     {
       title: "Full Stack Developer",
-      company: "XYZ Inc.",
-      years: "January 2018 - May 2020",
-      mainTech: ["Svelte", "Node.js"],
-      technologies: ["HTML", "CSS", "JavaScript", "Express", "MongoDB"],
+      company: "Asychron Solutions Pvt Ltd ",
+      years: "January 2021 - Oct 2022",
+      mainTech: ["React"],
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React Js",
+        "React Native",
+        "Node JS",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+      ],
     },
-    // Add more experiences as needed
   ];
 
   const resumeBasicInfo = {

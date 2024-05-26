@@ -12,8 +12,8 @@ import "react-vertical-timeline-component/style.min.css";
 
 const Experience = ({ resumeExperience, resumeBasicInfo }) => {
   if (resumeExperience && resumeBasicInfo) {
-    var sectionName = resumeBasicInfo.section_name.experience;
-    var work = resumeExperience.map((work, i) => {
+    var sectionName = resumeBasicInfo?.section_name?.experience;
+    var work = resumeExperience?.map((work, i) => {
       const technologies = work.technologies;
       const mainTechnologies = work.mainTech;
 
@@ -35,17 +35,17 @@ const Experience = ({ resumeExperience, resumeBasicInfo }) => {
           icon = <FaReact className="experience-icon" />;
         } else if (technology === "Svelte") {
           icon = <FaAssistiveListeningSystems className="experience-icon" />;
-        } else {
-          // You can add more conditions for other technologies
-          icon = null; // Or provide a default icon
         }
+        //  else {
+        //   // You can add more conditions for other technologies
+        //   icon = null; // Or provide a default icon
+        // }
         return (
           <span
             className="badge mr-2 mb-2 font-bold text-white"
             key={i}
             style={{ backgroundColor: "#c770f0" }}
           >
-            {icon}
             {technology}
           </span>
         );
