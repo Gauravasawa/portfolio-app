@@ -1,8 +1,4 @@
-import {
-  FaAssistiveListeningSystems,
-  FaHourglassHalf,
-  FaReact,
-} from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 import { RiSvelteFill } from "react-icons/ri";
 import {
   VerticalTimeline,
@@ -30,12 +26,7 @@ const Experience = ({ resumeExperience, resumeBasicInfo }) => {
       });
       var tech = technologies.map((technology, i) => {
         // Render different icons based on the technology
-        let icon;
-        if (technology === "React") {
-          icon = <FaReact className="experience-icon" />;
-        } else if (technology === "Svelte") {
-          icon = <FaAssistiveListeningSystems className="experience-icon" />;
-        }
+
         //  else {
         //   // You can add more conditions for other technologies
         //   icon = null; // Or provide a default icon
@@ -109,14 +100,14 @@ const Experience = ({ resumeExperience, resumeBasicInfo }) => {
       <div className="col-md-8 mx-auto">
         <VerticalTimeline>
           {work}
-          <VerticalTimelineElement
+          {/* <VerticalTimelineElement
             iconStyle={{
               background: "#c770f0",
               color: "#fff",
               textAlign: "center",
             }}
             icon={<FaHourglassHalf className="experience-icon" />}
-          />
+          /> */}
         </VerticalTimeline>
       </div>
     </section>
